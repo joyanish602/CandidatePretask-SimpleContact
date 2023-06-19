@@ -7,7 +7,7 @@ This project contains a simple contact form on the home page of a default projec
 The form is located in HomeController.Index.
 
 - Write the POST action for this view.  It should trigger an email which would be sent via an existing service in the project.
-- Your solution should consider how you'll handle the UI for this, and you should ensure that you pay attention to the existing service's implicit input requirements.
+- Your solution should consider the user experience during an error or success.  Ensure that you pay attention to the existing service's implicit input requirements and prevent exceptions from occurring.
 - Please make any other changes to the project as you see fit to improve the overall code.
 - Spend about 30-45 mins completing the task.
 
