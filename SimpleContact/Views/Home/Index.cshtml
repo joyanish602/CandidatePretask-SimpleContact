@@ -15,19 +15,28 @@
         <form asp-action="Index" method="post">
             <div class="form-group mb-2">
                 <label for="name">Name</label>
-                <input type="text" class="form-control" id="name">
+                <input type="text" class="form-control" id="name" name="senderName" required>
             </div>
             <div class="form-group mb-2">
                 <label for="email">Email</label>
-                <input type="text" class="form-control" id="email">
+                <input type="email" class="form-control" id="email" name="senderEmail" required>
             </div>
             <div class="form-group mb-2">
                 <label for="message">Mesage</label>
-                <textarea type="text" class="form-control" id="message"></textarea>
+                <textarea type="text" class="form-control" id="message" name="senderMessage" required></textarea>
             </div>
             <div class="form-group mb-2">
                 <input type="submit" class="btn btn-primary" value="Send">
             </div>
+            <div class="form-group mb-2">
+                <span style="color:green">@ViewBag.Message</span>
+            </div>
+            @if (ViewBag.ErrMessage != null)
+            {
+                <div class="alert alert-danger">
+                    <p>@ViewBag.ErrMessage</p>
+                </div>
+            }
         </form>
     </div>
 </div>
